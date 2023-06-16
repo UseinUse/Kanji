@@ -47,17 +47,6 @@ namespace LeaningKanji
             public string[] onReadings;
             public string[] nameReadings;        
 
-            public Kanji(string kanji, int strokeCount, int jlptLevel, string[] kunReadings, string[] onReadings, string[] nameReadings)
-            {
-                this.kanji = kanji ?? "";
-                this.strokeCount = strokeCount;
-                this.jlptLevel = jlptLevel;
-                this.korMeanings = Data.korMeaningsInfo[kanji].Split('/') ?? new string[] { "" };
-                this.kunReadings = kunReadings ?? new string[] { "" };
-                this.onReadings = onReadings ?? new string[] { "" };
-                this.nameReadings = nameReadings ?? new string[] { "" };
-            }
-
             public Kanji(string kanji, int strokeCount, int jlptLevel, string[] korMeanings, string[] kunReadings, string[] onReadings, string[] nameReadings)
             {
                 this.kanji = kanji ?? "";
